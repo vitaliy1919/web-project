@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+}
+
+body *{
+    font-family: 'PT Sans';
+    
+}
+.big-font {
+    font-size: 30px;
+}
+
+.extra-big-font {
+    font-size: 40px;
+}
+.font {
+    font-size: 14px;
+}
+
+.flex-rows {
+    display: flex;
+    
+}
+.flex-rows-nr {
+    display: flex;
+}
+.flex-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+header {
+    background-color: #dcdcdc;
+    color: #747474;
+    justify-content: space-around;
+    min-height: 30vh;
+    align-items: center;
+}
+
+#company-logo {
+    background-color: #747474;
+    height: 11vh;
+    width: 11vh;
+}
+
+#company-info {
+    display: flex;
+    min-height: 11vh;
+}
+
+nav {
+    background-color: #777777;
+    color: white;
+    min-height: 10.5vh;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    font-size: 30px;
+    margin: 0% 1% 0% 1%;
+    font-family: 'PT Sans';
+}
+
+nav a:link, a:visited{
+    color: white;
+    text-decoration: none;
+    border-right: 20px;
+    border-color: white;
+}
+
+nav a:hover {
+    color: white;    
+    text-decoration: underline;
+    border-right: 20px;
+    border-color: white;
+}
+
+#big-image {
+    height: 45vmin;
+    width: inherit;
+
+    background-color: #f9f9f9;
+    background-image: url("photo.png");
+    background-size: cover;
+}
+section.main {
+    min-height: 103vh;
+    justify-content: center;
+    align-items: initial;
+    padding: 3.3vh;
+}
+/* section.main *{
+    font-size: 14px;
+} */
+#news {
+    max-height: 70vh;
+    width: 18vw;
+    padding: 1vh 6vh 1vh 4vh;
+    background-color: #777777;
+    overflow: auto;
+}
+
+#news * {
+    color: white;
+    line-height: 1.55;
+    padding-bottom: 1.2vh;
+
+}
+
+#news > div{
+    letter-spacing: 1px;
+}
+#site-info {
+    min-height: 62vh;
+    max-width: 40vw;
+    padding: 0 4vw 0 4vw; 
+    
+}
+
+#site-info p {
+    word-wrap: break-word;
+    text-align: justify;
+    color: #787878;
+    line-height: 1.55;
+    padding-bottom: 2vh;
+    
+}
+
+#site-info > div{
+    letter-spacing: 2px;
+    color: #787878;
+    
+}
+
+
+footer {
+    background-color: #777777;
+    color: #333;
+    padding: 6vh 6vh 4vh 10vh;
+    min-height: 24vh;
+
+    color:white;
+    justify-content: space-around;
+    
+}
+
+#footer-logo {
+    background-image: url("photo.png");
+}
+
+@media only screen and (max-width: 620px) {
+    .flex-rows {
+        flex-direction: column;
+    }
+    #news {
+        width: inherit;
+
+    }
+    #site-info {
+        max-width: inherit;
+    }
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+    section.main {
+        padding: 0;
+    }
+    nav div {
+        display: none;
+    }
+}
