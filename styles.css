@@ -6,6 +6,11 @@ body *{
     font-family: 'PT Sans';
     
 }
+:root {
+    --primary-color: #dcdcdc;
+    --primary-dark-color: #747474;
+    --accent-color:#747474;
+}
 .big-font {
     font-size: 30px;
 }
@@ -34,15 +39,15 @@ body *{
 }
 
 header {
-    background-color: #dcdcdc;
-    color: #747474;
+    background-color: var(--primary-color);
+    color: var(--primary-dark-color);
     justify-content: space-around;
     min-height: 30vh;
     align-items: center;
 }
 
 #company-logo {
-    background-color: #747474;
+    background-color: var(--primary-dark-color);
     height: 11vh;
     width: 11vh;
 }
@@ -53,7 +58,7 @@ header {
 }
 
 nav {
-    background-color: #777777;
+    background-color: var(--primary-dark-color);
     color: white;
     min-height: 10.5vh;
     max-width: 100%;
@@ -82,7 +87,7 @@ nav a:hover {
     height: 45vmin;
     width: inherit;
 
-    background-color: #f9f9f9;
+    background-color: var(--primary-dark-color);
     background-image: url("photo.png");
     background-size: cover;
 }
@@ -99,8 +104,9 @@ section.main {
     max-height: 70vh;
     width: 18vw;
     padding: 1vh 6vh 1vh 4vh;
-    background-color: #777777;
+    background-color: var(--accent-color);
     overflow: auto;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #news * {
@@ -137,7 +143,7 @@ section.main {
 
 
 footer {
-    background-color: #777777;
+    background-color: var(--primary-dark-color);
     color: #333;
     padding: 6vh 6vh 4vh 10vh;
     min-height: 24vh;
