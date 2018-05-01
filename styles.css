@@ -60,25 +60,22 @@ nav {
     justify-content: center;
     align-items: center;
 }
-
+a {
+    color: white;
+}
 nav a {
     font-size: 30px;
-    margin: 0% 1% 0% 1%;
+    padding: 0% 1% 0% 1%;
     font-family: 'PT Sans';
+    
 }
 
-nav a:link, a:visited{
-    color: white;
+nav a:link, a:visited {
     text-decoration: none;
-    border-right: 20px;
-    border-color: white;
 }
 
-nav a:hover {
-    color: white;    
-    text-decoration: underline;
-    border-right: 20px;
-    border-color: white;
+nav a:hover {   
+    text-decoration: underline;   
 }
 
 #big-image {
