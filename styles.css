@@ -4,15 +4,20 @@ body {
 
 body *{
     font-family: 'PT Sans';
+    line-height: 22px;
     
 }
 :root {
-    --primary-color: #dcdcdc;
-    --primary-dark-color: #747474;
-    --accent-color:#747474;
+    --primary-color: #4CAF50;
+    --primary-dark-color: #388E3C;
+    --accent-color:#FF9800;
+    --text-color:#FFFFFF;
+    --primary-text:#212121;
+    --secondary-text: #757575;
 }
 .big-font {
     font-size: 30px;
+    line-height: 1;
 }
 
 .extra-big-font {
@@ -38,18 +43,24 @@ body *{
     justify-content: space-around;
 }
 
+.shadow {
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 header {
     background-color: var(--primary-color);
-    color: var(--primary-dark-color);
+    color: var(--text-color);
     justify-content: space-around;
     min-height: 30vh;
     align-items: center;
 }
 
 #company-logo {
-    background-color: var(--primary-dark-color);
+    background-color: var(--accent-color);
+    background-image: url("logo.jpg");
+    background-size: cover;
     height: 11vh;
-    width: 11vh;
+    width: 15vh;
 }
 
 #company-info {
@@ -88,7 +99,7 @@ nav a:hover {
     width: inherit;
 
     background-color: var(--primary-dark-color);
-    background-image: url("photo.png");
+    background-image: url("garden.jpg");
     background-size: cover;
 }
 section.main {
@@ -96,6 +107,7 @@ section.main {
     justify-content: center;
     align-items: initial;
     padding: 3.3vh;
+    background-color: #E8F5E9;
 }
 /* section.main *{
     font-size: 14px;
@@ -106,13 +118,14 @@ section.main {
     padding: 1vh 6vh 1vh 4vh;
     background-color: var(--accent-color);
     overflow: auto;
-    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
 
 #news * {
     color: white;
     line-height: 1.55;
     padding-bottom: 1.2vh;
+    
 
 }
 
@@ -129,7 +142,7 @@ section.main {
 #site-info p {
     word-wrap: break-word;
     text-align: justify;
-    color: #787878;
+    
     line-height: 1.55;
     padding-bottom: 2vh;
     
@@ -137,7 +150,7 @@ section.main {
 
 #site-info > div{
     letter-spacing: 2px;
-    color: #787878;
+    
     
 }
 
