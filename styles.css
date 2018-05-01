@@ -4,7 +4,7 @@ body {
 
 body *{
     font-family: 'PT Sans';
-    line-height: 22px;
+    /* line-height: 22px; */
     
 }
 :root {
@@ -17,7 +17,7 @@ body *{
 }
 .big-font {
     font-size: 30px;
-    line-height: 1;
+    line-height: 1/2;
 }
 
 .extra-big-font {
@@ -78,10 +78,13 @@ nav {
 }
 a {
     color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 nav a {
     font-size: 30px;
-    padding: 0% 1% 0% 1%;
+    padding: 0.5% 1% 0% 1%;
     font-family: 'PT Sans';
     
 }
@@ -180,6 +183,9 @@ footer {
     }
     #site-info {
         max-width: inherit;
+    }
+    .big-font{
+        font-size: 25px;
     }
     nav {
         padding: 0;
