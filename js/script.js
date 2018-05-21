@@ -97,31 +97,65 @@ $(document).ready(function(){
         $(".overlay").fadeOut();
         $(".form-center").fadeOut();
     });
-    // $(".none").on("click", function (event) {
-    //     alert((event.target.id));
-    // });
-    // function showElem(id) {
-    //     let elem = document.getElementById(id);
-    //     if (elem.style.display ==="" || elem.style.display === "none") {
-    //         elem.style.display = "block";
-    //         for (let i = 0; i < leftMenuItems.length; i++)
-    //             if (leftMenuItems[i] != elem)
-    //                 leftMenuItems[i].style.textDecoration = "none";
-    //             else
-    //                 leftMenuItems[i].style.textDecoration = "underline";
-    //     } else {
-    //         elem.style.display = "none";
-    //     }
-    // }
-
-    let paginationElemList = document.getElementById("pagination").getElementsByTagName("button");
-    paginationElemList[0].style.fontSize = "25px";
-    for (let i = 0; i < paginationElemList.length; i++) {
-        let cur_a = paginationElemList[i];
-        cur_a.addEventListener("click", function() {
-            for (let i = 0; i < paginationElemList.length; i++)
-                paginationElemList[i].style.fontSize = "20px";
-            cur_a.style.fontSize = "25px";
-        });
+    
+    if (document.getElementById("pagination") != null) {
+        let paginationElemList = document.getElementById("pagination").getElementsByTagName("button");
+        paginationElemList[0].style.fontSize = "25px";
+        for (let i = 0; i < paginationElemList.length; i++) {
+            let cur_a = paginationElemList[i];
+            cur_a.addEventListener("click", function() {
+                for (let i = 0; i < paginationElemList.length; i++)
+                    paginationElemList[i].style.fontSize = "20px";
+                cur_a.style.fontSize = "25px";
+            });
+        }
     }
+    let newsArchive = document.getElementById("news-archive");
+    if (newsArchive) {
+        for (let i = 0; i < 5; i++) {
+            $("#news-archive").append($(".news-item")[0].cloneNode(true));
+        }
+        
+        let titles = [
+            "Хвойні рослини для “лінивого” саду.",
+            "Чудо світу у Вашому садку.",
+            "Імпозантний екзот.",
+            "Екзотика у Вашому саду.",
+            "Рослина, що допомагає не старіти.",
+            '"Королева" саду.'
+        ]
+        let desc = [
+            'Невибагливі,приживаються на будь-яких ґрунтах,швидко ростуть і прикрашають собою будь-яку ділянку. Які хвойні відповідають цим критеріям??',
+            "Магічна ідея для декорування саду. Прикрасьте свій світ за допомогою чудового зеленого друга. ",
+            "Ви поціновувач незвичайного та екзотичного і шукаєте щось зовсім нове та неординарне для свого саду? Тепер це можливо....",
+            "Неповторні садові композиції,цікаві штрихи,витонченість... Хочете зробити сад більш оригінальним і цікавим?",
+            "Нею полюбляють ласувати як дорослі, так і діти. Проте чи все ми знаємо про користь цієї ягоди?",
+            "Чарівна обманщиця з сімейства гортензієвидних. Які таємниці зберігає красуня?"
+        ]
+        let dates = [
+            "14 жовтня 2017 р. ",
+            "26 вересеня 2017 р. ",
+            "3 вересеня 2017 р. ",
+            "19 серпня 2017 р. ",
+            "13 липня 2017 р",
+            "2 липня 2017 р"
+        ]
+        let newsTitels = $(".news-title");
+        let newsDescriptions = $(".news-description");
+        let newsDates = $(".news-date");
+        let newsImages = $(".news-image");
+        debugger;
+        for (let i = 0; i < 6; i++) {
+            newsTitels[i].innerText = titles[i];
+            newsDescriptions[i].innerText = desc[i];
+            newsDates[i].innerText = dates[i];
+            let b = i +1;
+            let a = "url(\"./images/news/" + b +'.jpg")';
+            console.log(a);
+            newsImages[i].style.backgroundImage =  a;
+            // newsImages[i].css("background-image", "url(\"news\"" + b +'.jpg")');
+        }
+        debugger;
+    }
+    // $("#news-archive").append(newsItem);
 });
