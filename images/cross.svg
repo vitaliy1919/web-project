@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="210"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+ <title>orange cross</title>
+ <g style="" class="currentLayer">
+  <title>Layer 1</title>
+  <g id="layer1" class="">
+   <path fill="#ff0000" fill-rule="evenodd" stroke-width="0.25pt" id="path4950" d="m40,0 l-40,40 l170,170 l40,-40 l-170,-170 z"/>
+   <path fill="#ff0000" fill-rule="evenodd" stroke-width="0.25pt" id="path4952" d="m0,170 l170,-170 l40,40 l-170,170 l-40,-40 z"/>
+  </g>
+ </g>
+</svg>
