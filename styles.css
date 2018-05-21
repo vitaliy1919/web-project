@@ -9,7 +9,14 @@ body * {
     font-family: 'PT Sans';
     /* line-height: 22px; */
 }
+@font-face {
+    font-family: OpenSans;
+    src: url("fonts/OpenSans-Regular.ttf");
+}
 
+.local-font {
+    font-family: OpenSans;
+}
 :root {
     --primary-color: #4CAF50;
     --primary-dark-color: #388E3C;
