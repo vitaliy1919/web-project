@@ -8,22 +8,29 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
 </head>
 <body>
     <div >
         <header class="flex-rows">
             <div class="flex-rows-nr">
-                <div id="company-logo" class="shadow">
-    
-                </div>
+                
+                <img src="images/logo.jpg" alt = "logo" height = "100px" width = "142px" style="align-self: flex-start; margin-right: 1vh;" class="shadow">
                 <div class="flex-columns" style="justify-content: space-between; margin-left: 1vmin; max-width: 30vmin;">
                     <b class="big-font" style="line-height: 0.9">Все для поля, саду і городу</b>
                     <div class="font">Дрібний та крупний опт!</div>
                 </div>
             </div>
-            <div class="big-font">
-                +38 (023) 456 78 89 <br>
-                +38 (045) 237 81 89
+            <div class = "flex-columns">
+                <div class="big-font local-font">
+                    +38 (023) 456 78 89 <br>
+                    +38 (045) 237 81 89
+                </div>
+    
+                <button id = "feedback" class = "big-font">
+                    Зворотній зв’язок
+                </button>
             </div>
         </header>
         <nav class="flex-rows">
@@ -38,37 +45,45 @@
             <a href="./contacts.html">Контакти</a>
         </nav>
         <div id="big-image">
+            <div class = "flex-rows-nr" style="height: 100%; align-items: center; justify-content: space-between;">
+                <button id = "left-arrow">
     
+                </button>
+                <button id ="right-arrow">
+    
+                </button>
+            </div>
         </div>
+        
         <section class="main font flex-rows">
             <div id="news" class = "flex-columns shadow">
-                    <div class="extra-big-font"><b>Новини</b></div>
+                <div class="extra-big-font"><b>Новини</b></div>
 
-                    <p>
-                        <i>14 жовтня 2017 р.</i> <br>
-                        <b>Хвойні рослини для “лінивого” саду.</b>
-                        Невибагливі,приживаються на будь-яких ґрунтах,швидко ростуть і прикрашають собою будь-яку ділянку.
-                        Які хвойні відповідають цим критеріям?
-                    </p>
-                    
-                    <p>
-                        <i>26 вересеня 2017 р.</i> <br>
-                        <b>Чудо світу у Вашому садку.</b>
-                        Магічна ідея для декорування саду. 
-                        Прикрасьте свій світ за допомогою чудового зеленого друга. 
-                    </p>
-                    <p> 
-                        <i>3 вересеня 2017 р.</i> <br>
-                        <b>Імпозантний екзот.</b>
-                        Ви поціновувач незвичайного та екзотичного і шукаєте щось зовсім нове та неординарне для свого саду?
-                        Тепер це можливо
-                    </p>
-                    <p> 
-                        <i>19 серпня 2017 р.</i> <br>
-                        <b>Екзотика у Вашому саду.</b>
-                        Неповторні садові композиції,цікаві штрихи,витонченість...
-                        Хочете зробити сад більш оригінальним і цікавим?
-                    </p>
+                <p>
+                    <i>14 жовтня 2017 р.</i> <br>
+                    <b>Хвойні рослини для “лінивого” саду.</b>
+                    Невибагливі,приживаються на будь-яких ґрунтах,швидко ростуть і прикрашають собою будь-яку ділянку.
+                    Які хвойні відповідають цим критеріям?
+                </p>
+                
+                <p>
+                    <i>26 вересеня 2017 р.</i> <br>
+                    <b>Чудо світу у Вашому садку.</b>
+                    Магічна ідея для декорування саду. 
+                    Прикрасьте свій світ за допомогою чудового зеленого друга. 
+                </p>
+                <p> 
+                    <i>3 вересеня 2017 р.</i> <br>
+                    <b>Імпозантний екзот.</b>
+                    Ви поціновувач незвичайного та екзотичного і шукаєте щось зовсім нове та неординарне для свого саду?
+                    Тепер це можливо
+                </p>
+                <p> 
+                    <i>19 серпня 2017 р.</i> <br>
+                    <b>Екзотика у Вашому саду.</b>
+                    Неповторні садові композиції,цікаві штрихи,витонченість...
+                    Хочете зробити сад більш оригінальним і цікавим?
+                </p>
                     <!-- <p>
                         <i>5 серпня 2017 р.</i>
                         <b>Рослина, що допомагає не старіти.</b>
@@ -94,9 +109,31 @@
             </div>
         </section>
 
+        <div class = "overlay">
+
+        </div>
+        <div class = "form-center">
+            
+                    
+                
+            <form>
+                <div class = "cross"></div>
+                <h1>Зворотній зв’язок</h1>
+                <div>Iм’я </div>
+                <span><input type = "text" placeholder=" " name = "firstname" pattern = "(\p{Letter}|’| )+$" required/></span>
+                <div>Номер телефону</div>
+                <span><input type = "tel" placeholder="Формат: +380431234567" name = "number" required pattern = "[\+]\d{12}"/> </span>
+                <div>E-mail</div>
+                <span><input type="email" placeholder=" " name = "e-mail" required/></span>
+                <div>Повідомлення</div>
+                <textarea rows = "10"></textarea>
+                <button class = "button" type="submit">ВІДПРАВИТИ</button>
+            </form>
+            
+        </div>
         <footer class="font flex-rows">
             <div>
-                © 2012-2013 ЗАО «Компания» <br>
+                © 2012-2017 ТОВ «Все для поля, саду і городу» <br>
                 info@name.ru
             </div>
             <div class="flex-columns" style="height: 15vh; justify-content: space-between;">
@@ -107,7 +144,7 @@
                 <a href="./contacts.html">Контакти</a>
             </div>
             <div class="flex-rows">
-                <img src="images/logo.jpg" style="align-self: flex-start; margin-right: 1vh;" class="shadow">
+                <img src="images/logo.jpg" alt = "logo" height = "100px" width = "142px" style="align-self: flex-start; margin-right: 1vh;" class="shadow">
                 <div>
                     <u>Усе для Вас</u> — <br>
                     компанія «Все для поля, саду і городу»

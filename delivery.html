@@ -9,23 +9,30 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href='https://fonts.googleapis.com/css?family=PT Sans' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body>
 
     <header class="flex-rows">
         <div class="flex-rows-nr">
-            <div id="company-logo" class="shadow">
-
-            </div>
+            
+            <img src="images/logo.jpg" alt = "logo" height = "100px" width = "142px" style="align-self: flex-start; margin-right: 1vh;" class="shadow">
             <div class="flex-columns" style="justify-content: space-between; margin-left: 1vmin; max-width: 30vmin;">
                 <b class="big-font" style="line-height: 0.9">Все для поля, саду і городу</b>
                 <div class="font">Дрібний та крупний опт!</div>
             </div>
         </div>
-        <div class="big-font">
-            +38 (023) 456 78 89 <br>
-            +38 (045) 237 81 89
+        <div class = "flex-columns">
+            <div class="big-font local-font">
+                +38 (023) 456 78 89 <br>
+                +38 (045) 237 81 89
+            </div>
+
+            <button id = "feedback" class = "big-font">
+                Зворотній зв’язок
+            </button>
         </div>
     </header>
     <nav class="flex-rows">
@@ -40,7 +47,14 @@
         <a href="./contacts.html">Контакти</a>
     </nav>
     <div id="big-image">
+        <div class = "flex-rows-nr" style="height: 100%; align-items: center; justify-content: space-between;">
+            <button id = "left-arrow">
 
+            </button>
+            <button id ="right-arrow">
+
+            </button>
+        </div>
     </div>
     <section class="main font flex-rows">
         <div id="news" class="flex-columns shadow">
@@ -103,9 +117,31 @@
         </div>
     </section>
 
+    <div class = "overlay">
+
+    </div>
+    <div class = "form-center">
+        
+                
+            
+        <form>
+            <div class = "cross"></div>
+            <h1>Зворотній зв’язок</h1>
+            <div>Iм’я </div>
+            <span><input type = "text" placeholder=" " name = "firstname" pattern = "(\p{Letter}|’| )+$" required/></span>
+            <div>Номер телефону</div>
+            <span><input type = "tel" placeholder="Формат: +380431234567" name = "number" required pattern = "[\+]\d{12}"/> </span>
+            <div>E-mail</div>
+            <span><input type="email" placeholder=" " name = "e-mail" required/></span>
+            <div>Повідомлення</div>
+            <textarea rows = "10"></textarea>
+            <button class = "button" type="submit">ВІДПРАВИТИ</button>
+        </form>
+        
+    </div>
     <footer class="font flex-rows">
         <div>
-            © 2012-2013 ЗАО «Компания» <br>
+            © 2012-2017 ТОВ «Все для поля, саду і городу» <br>
             info@name.ru
         </div>
         <div class="flex-columns" style="height: 15vh; justify-content: space-between;">
@@ -116,7 +152,7 @@
             <a href="./contacts.html">Контакти</a>
         </div>
         <div class="flex-rows">
-            <img src="images/logo.jpg" style="align-self: flex-start; margin-right: 1vh;" class="shadow">
+            <img src="images/logo.jpg" alt = "logo" height = "100px" width = "142px" style="align-self: flex-start; margin-right: 1vh;" class="shadow">
             <div>
                 <u>Усе для Вас</u> — <br>
                 компанія «Все для поля, саду і городу»
